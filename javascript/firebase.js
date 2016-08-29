@@ -7,10 +7,9 @@ function getTickets () {
 	return new Promise(function(res, rej) {
 	  	ref.on("value", function(snapshot) {
 		  	let data = snapshot.val();
-		  	res(data)
+		  	res(data);
 		}, function (errorObject) {
-			rej(errorObject.code)
-		  console.log("The read failed: " + errorObject.code);
+			rej(errorObject.code);
 		});
 	});
 }

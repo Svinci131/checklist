@@ -1,6 +1,6 @@
 import React, {PropTypes, Component} from 'react';
 import Issue from './issue'
-import { items } from './basicCheckListItems.js';
+import { items } from './../basicCheckListItems.js';
 
 export default class ItemChecklist extends React.Component {
 	constructor(props) {

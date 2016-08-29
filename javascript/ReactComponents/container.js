@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './card'
-import { getTickets, addTicket } from "./../firebase";
+import { addTicket } from "./../firebase";
 
 export default class Container extends React.Component {
   constructor(props) {
@@ -48,8 +48,6 @@ export default class Container extends React.Component {
   _makeNewTicketItem (e) {
   	let input = e.target.value; 
   	if (input.length > 0) this.setState({newItem: input})
-  	if(e.keyCode == 13) {
- 		console.log("done", input)
- 	}
+  	if(e.keyCode == 13) console.log("done", input)
   }
 }

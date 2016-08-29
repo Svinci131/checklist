@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0;'>
+    <title ></title>
+    <link rel='stylesheet' href='styles/reset.css'>
+    <link rel='stylesheet' href='styles/semantic.min.css'>
+    <link rel='stylesheet' href='styles/main.css'>
+</head>
+<body>
+
+<div> 
+
+
+Is the script tag being attached?
+	Appended as a script? 
+	Response data coming back? 
+	Cachebuster/query string on the moatad.js request?
+	Dropped in correct location?
+	Secure or insecure tag?
+
+Is it tracking the right element? 
+
+if it’s timed out and can’t find an ad- if it creates ad we’re good(more code explanation in docs)
+USE FIND_RELATIVE or TRACK PROXY
+
+
+Are all IDs and keys coming in correctly on pixel fires?
+
+Are all the keys present on the script in the DOM coming into all relevant keys on pixel fires?
+
+i key: level0top. Will end in TEST1 if you're on staging.
+
+d key: levels. 
+
+(MUST have 4 values, separated by colons, even if those are empty. ::: is an acceptable key. foo:bar:test is not.)
+
+bo/bp/bd keys: slicers. 
+
+If there's only one slicer, it's bd. Two, bo/bd. Three, bo/bp/bd.
+
+Any zMoat keys or client-specific keys. 
+
+(Generally requires #define SEND_ALL_Z_IDS or INCLUDE_QS_PARAMS ["zMoatFoo"])cb=[MOAT_CB]
+
+ak key: Screenshot URL. Only present on e=0 and e=25
+
+
+
+Is it a Client issue? 
+
+the first Micheal Kors thing where the google ad iframe and the add were siblings?
+
+
+Are viewability events tracking correctly?
+
+*Remember, only 30% viewability is needed for big ads for MRC viewable! Cutoff is 236425 pixels. (965x245)
+
+
+
+—  Search 'Fired Pixel' in console: 
+
+ag/gg: inview/fullview time
+
+ce/gb: periscope inview/fullview time if present
+
+ad/gk: safeframe/moatframe inview/fullview time if present
+
+livperc: last in-view percentage
+
+
+
+Are Mouse events tracking correctly?
+
+
+
+e=1 pixels for non-iframe ad elements, 
+
+e=22 for iframe ad elements
+
+e=2 is mousedown
+
+e=3 is click. 
+
+
+
+In rare cases (flite ads): 
+
+e=1 and e=22 due to proxy tracker interactions.
+
+
+
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+    <script src='javascript/main.js'></script>
+</body>
+</html>
